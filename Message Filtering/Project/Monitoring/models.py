@@ -44,6 +44,7 @@ class MSG192(models.Model):
     reciever = models.CharField(max_length=300)
     reference20 = models.CharField(max_length=300)
     reference21 = models.CharField(max_length=300)
+    kay = models.ForeignKey(MSG)
     #must add some fields are missing
 
     def __unicode__(self):
@@ -58,7 +59,8 @@ class MSG196(models.Model):
     sender = models.CharField(max_length=300)
     reciever = models.CharField(max_length=300)
     reference20 = models.CharField(max_length=300)
-    reference21 = models.CharField(max_length=300)\
+    reference21 = models.CharField(max_length=300)
+    kay = models.ForeignKey(MSG)
     #Must add some fields are missing
 
     def __unicode__(self):
@@ -74,6 +76,7 @@ class MSG199(models.Model):
     reciever = models.CharField(max_length=300)
     reference20 = models.CharField(max_length=300)
     reference21 = models.CharField(max_length=300)
+    kay = models.ForeignKey(MSG)
     #Must add some fields are missing
 
 
