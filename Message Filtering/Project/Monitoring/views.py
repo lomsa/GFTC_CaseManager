@@ -177,5 +177,134 @@ def mt195():
                 reader_name77a.close()
 
 
+def mt199():
+    Folder = "C:\MSG\Success\Mt199"
+    os.chdir(Folder)
+    file_names = os.listdir(os.curdir)
+    for file in file_names:
+        if file.endswith(".out"):
+            reader = open(file, 'r')
+            result = reader.readlines()[0]
+            if "2:I199" in result or "2:O199" in result :
+                i199 = MSG199()
+                i199.sender = result[7:19]
+                start = result.find('{2:I199')
+                end = result.find('N}', start)
+                reciver = result[start:end + 1]
+                i199.reciver = reciver[start:end + 1]
+                i199.input_output = reciver[3]
+                reader.close()
+                referance20 = open(file, 'r')
+                result_referance = referance20.readlines()[1]
+                i199.reference20 = result_referance[4:]
+                referance20.close()
+                referance21 = open(file, 'r')
+                result_referance21 = referance21.readlines()[2]
+                i199.reference21 = result_referance21[4:]
+                referance21.close()
+                reader_name79 = open(file, 'r')
+                name79_results = reader_name79.readlines()
+                start = name79_results.find(':79:')
+                end = name79_results.find('-}')
+                name_79 = reader_name79[start + 3:end - 3]
+                i199.name75 = name_79
+                reader_name79.close()
+                i199.save()
+
+def mt196():
+    Folder = "C:\MSG\Success\Mt196"
+    os.chdir(Folder)
+    file_names = os.listdir(os.curdir)
+    for file in file_names:
+        if file.endswith(".out"):
+            reader = open(file, 'r')
+            result = reader.readlines()[0]
+            if "2:I196" in result or "2:O196" in result:
+                i196 = MSG196()
+                i196.sender = result[7:19]
+                start = result.find('{2:I199')
+                end = result.find('N}', start)
+                reciver = result[start:end + 1]
+                i196.reciver = reciver[start:end + 1]
+                i196.input_output = reciver[3]
+                reader.close()
+                referance20 = open(file, 'r')
+                result_referance = referance20.readlines()[1]
+                i196.reference20 = result_referance[4:]
+                referance20.close()
+                referance21 = open(file, 'r')
+                result_referance21 = referance21.readlines()[2]
+                i196.reference21 = result_referance21[4:]
+                referance21.close()
+                reader_name76 = open(file, 'r')
+                name76_results = reader_name76.readlines()
+                start = name76_results.find(':76:')
+                end = name76_results.find(':77A:')
+                result = reader_name76[start + 3:end - 3]
+                i196.field_76 = result
+                reader_name76.close()
+                reader_name77 = open(file, 'r')
+                reader_name77_read = reader_name77.readlines()
+                start = reader_name77_read.find(':77A:')
+                end = reader_name77_read.find(':11S:')
+                result = reader_name77_read[start+3:end-4]
+                i196.field_77 = result
+                reader_name77.close()
+                reader_date= open(file, 'r')
+                date_11 = reader_date.readlines()
+                start = date_11.find(':11S:')
+                end = date_11.find(':79:')
+                result = date_11[start+8:end-4]
+                i196.date_11 = result
+                reader_date.close()
+                field_79_reader = open(file, 'r')
+                field_79_read = field_79_reader.readlines()
+                start = field_79_read.find(':79:')
+                end = field_79_read.find('-}')
+                result = field_79_read[start+4:end-2]
+                i196.field_79 =result
+                field_79_reader.close()
+                i196.save()
+
+
+
+def mt192():
+    Folder = "C:\MSG\Success\Mt192"
+    os.chdir(Folder)
+    file_names = os.listdir(os.curdir)
+    for file in file_names:
+        if file.endswith(".out"):
+            reader = open(file, 'r')
+            result = reader.readlines()[0]
+            if "2:I196" in result or "2:O196" in result:
+                i192 = MSG192()
+                i192.sender = result[7:19]
+                start = result.find('{2:I199')
+                end = result.find('N}', start)
+                reciver = result[start:end + 1]
+                i192.reciver = reciver[start:end + 1]
+                i192.input_output = reciver[3]
+                reader.close()
+                referance20 = open(file, 'r')
+                result_referance = referance20.readlines()[1]
+                i192.reference20 = result_referance[4:]
+                referance20.close()
+                referance21 = open(file, 'r')
+                result_referance21 = referance21.readlines()[2]
+                i192.reference21 = result_referance21[4:]
+                referance21.close()
+                reader_name79 = open(file, 'r')
+                name79_results = reader_name79.readlines()
+                start = name79_results.find(':79:')
+                end = name79_results.find('-}')
+                name_79 = reader_name79[start + 3:end - 3]
+                i192.name79 = name_79
+                reader_name79.close()
+                i192.save()
+
+
+
+
+
 
 

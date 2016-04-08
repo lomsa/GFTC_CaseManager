@@ -39,54 +39,51 @@ class MSG195(models.Model):
         verbose_name_plural = 'მესიჯი 195'
 
 
-class MSG192(models.Model):
-    sender = models.CharField(max_length=300)
-    reciever = models.CharField(max_length=300)
-    reference20 = models.CharField(max_length=300)
-    reference21 = models.CharField(max_length=300)
-    kay = models.ForeignKey(MSG)
-    #must add some fields are missing
+class MSG199(models.Model):
+        sender = models.CharField(max_length=300)
+        reciver = models.CharField(max_length=300)
+        reference20 = models.CharField(max_length=300)
+        referance21 = models.CharField(max_length=300)
+        field_79 = models.TextField(max_length=300)
+        input_output = models.CharField(max_length=300)
 
-    def __unicode__(self):
-        return  u'%s' %(self.sender, self.reciever)
+        def __unicode__(self):
+            return u'%s' % (self.sender, self.reciver)
 
-    class Meta:
-        verbose_name = 'მესიჯი 192'
-        verbose_name_plural = 'მესიჯი 192'
-
+        class Meta:
+            verbose_name = 'მესიჯი 199'
+            verbose_name_plural = 'მესიჯი 199'
 
 class MSG196(models.Model):
-    sender = models.CharField(max_length=300)
-    reciever = models.CharField(max_length=300)
-    reference20 = models.CharField(max_length=300)
-    reference21 = models.CharField(max_length=300)
-    kay = models.ForeignKey(MSG)
-    #Must add some fields are missing
+        sender = models.CharField(max_length=300)
+        reciver = models.CharField(max_length=300)
+        reference20 = models.CharField(max_length=300)
+        referance21 = models.CharField(max_length=300)
+        field_76 = models.TextField(max_length=300)
+        field_77a = models.TextField(max_length=300)
+        date_11 = models.CharField(max_length=300)
+        field_79 = models.TextField(max_length=300)
+        input_output = models.CharField(max_length=300)
 
-    def __unicode__(self):
-        return u'%s' %(self.sender, self.reciever)
+        def __unicode__(self):
+            return u'%s' % (self.sender, self.reciver)
 
-    class Meta:
-        verbose_name = 'მესიჯი 196'
-        verbose_name_plural = 'მესიჯი 196'
+        class Meta:
+            verbose_name = 'მესიჯი 196'
+            verbose_name_plural = 'მესიჯი 196'
 
+class MSG192(models.Model):
+          sender = models.CharField(max_length=300)
+          reciver = models.CharField(max_length=300)
+          reference20 = models.CharField(max_length=300)
+          referance21 = models.CharField(max_length=300)
+          date_11 = models.CharField(max_length=300)
+          name79 = models.TextField(max_length=300)
+          input_output = models.CharField(max_length=300)
 
-class MSG199(models.Model):
-    sender = models.CharField(max_length=300)
-    reciever = models.CharField(max_length=300)
-    reference20 = models.CharField(max_length=300)
-    reference21 = models.CharField(max_length=300)
-    kay = models.ForeignKey(MSG)
-    #Must add some fields are missing
+          def __unicode__(self):
+                return u'%s' % (self.sender, self.reciver)
 
-
-    def __unicode__(self):
-        return  u'%s' % (self.sender, self.reciever)
-
-
-    class Meta:
-        verbose_name = 'მესიჯი 199'
-        verbose_name_plural = 'მესიჯი 199'
-
-
-
+          class Meta:
+               verbose_name = 'მესიჯი 192'
+               verbose_name_plural = 'მესიჯი 192'
